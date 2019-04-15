@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Sell</title>
+  <script>
+  function lengthRange(inputtxt, minlength, maxlength)
+{  	
+   var userInput = inputtxt.value;  
+   if(userInput.length >= minlength && userInput.length <= maxlength)
+      {  	
+        return true;  	
+      }
+   else
+      {  	
+	alert("Please input between " +minlength+ " and " +maxlength+ " characters");  		
+        return false;  	
+      }  
+}
+  </script>
+  <style>
+  .navbar {
+    margin-bottom: = 0;
+    border-radius: = 0;
+    background-color: #FFD700;
+    color: #000000;
+    font-size: 3.0em;
+    border: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .navbar {
+    margin-bottom: = 0;
+    border-radius: = 0;
+    background-color: #FFD700;
+    color: #000000;
+    padding: 1% 0;
+    font-size: 1.2em;
+    border: 0;
+  }
+  .navbar-brand {
+    float: left;
+    width: 90%;
+
+  }
+  .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse  .navbar-right .navbar-nav .active a:hover {
+    color: #000000;
+    background-color: #FFD700;
+  }
+  .navbar-inverse .navbar-nav li a {
+    color: #000000;
+  }
+  .navbar-left {
+    margin-left: 15px;
+    margin-top: 7px;
+  }
+  .carousel-caption {
+    top: 50%;
+    transform: translteY(-50%);
+    text-transform: uppercase;
+  }
+  .navbar-custom {
+    border-bottom: 1px solid;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+  }
+  .btn {
+    font-size: 18px;
+    color:#FFF;
+    Padding: 12px 22px;
+    background: #4682B4;
+    border: 2px solid #FFF;
+  }
+  .container {
+    margin: 4% auto;
+  }
+  .container1 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .container2 {
+    margin-top: 25px;
+
+  }
+  .container3 {
+    margin-left: 0px;
+  }
+  .container4 {
+    margin-left: 38px;
+  }
+  #icon {
+    max-width: 200px;
+    margin: 4% auto;
+  }
+  footer {
+    width: 100%;
+    color:#000000;
+    Padding: 5%;
+    background-color: #FFD700;
+  }
+  .fa:{
+    Padding: 15px;
+    font-size: 30px;
+    color: #FFF;
+  }
+  .fa:hover {
+    color: #D5D5D5;
+    text-decoration: none;
+  }
+  @media (max-width: 900px)  {
+    .fa{
+        font-size:20px;
+        Padding: 10px;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display:none;
+    }
+    #icon {
+      max-width: 150px;
+    }
+    h2 {
+      font-size: 1.7em;
+    }
+  }
+  </style>
+</head>
+<body>
+  <br><br>Sell Your books!
+ <form action="insert.jsp" method="POST">
+  <table class="navbar">
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="name" required></td>
+   </tr>
+   <tr>
+    <td>Author :</td>
+    <td><input type="text" name="author" required></td>
+   </tr>
+
+   <tr>
+    <td>Price :</td>
+    <td><input type="number" name="price" required></td>
+   </tr>
+   <tr>
+    <td>Phone no :</td>
+    <td>
+     <select name="phonecode" required>
+      <option selected hidden value="">Select Code</option>
+      <option value="+91">+91</option>
+      <option value="0261">0261</option>
+
+     </select>
+     <input type="phone" name="phone" required>
+     
+    </td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Submit" onclick="stringlength(document.form1.phone,10,10)></td>
+    
+   </tr>
+  </table>
+ </form>
+
+
+ <footer class="container-fluid text-center">
+ 	<div align="center" class="row">
+ 		<div class="col-5m-4">
+
+ 			<h3>Contact Us</h3>
+ 			<br>
+ 			<h4>Our address and contact info here.</h4>
+ 		</div>
+ 		<div class="col-5m-4">
+ 			<h3>Visit SCET</h3>
+ 			<a href="https://www.facebook.com/" class="fa fa=facebook"></a>
+ 			<a href="https://www.facebook.com/" class="fa fa=twitter"></a>
+ 			<a href="https://www.facebook.com/" class="fa fa=google"></a>
+ 			<a href="https://www.facebook.com/" class="fa fa=linkedin"></a>
+ 			<a href="https://www.youtube.com/" class="fa fa=youtibe"></a>
+ 		</div>
+ 		<div class="col-sm-4">
+     <div class="container3">
+ 			<img src="img/SCETLOGO.png" class="icon">
+       <div class="container4">
+       <a href="https://scet.ac.in/">scet.ac.in</a>
+       </div>
+       </div>
+ 		</div>
+ 	</div>
+ </footer>
+
+
+
+</body>
+</html>

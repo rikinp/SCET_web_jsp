@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="ISO-8859-1">
+<title>new registration</title>
+<script>
+function validate()                                    
+{ 
+    var name = document.forms["RegForm"]["fname"];               
+    var email = document.forms["RegForm"]["email"];    
+    var lname = document.forms["RegForm"]["lname"];  
+    var userid =  document.forms["RegForm"]["userid"];  
+    var password = document.forms["RegForm"]["password"];  
+      
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+   
+    if (lname.value == "")                               
+    { 
+        window.alert("Please enter your lastname."); 
+        lname.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (userid.value == "")                           
+    { 
+        window.alert("Please enter userid."); 
+        userid.focus(); 
+        return false; 
+    } 
+   
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter password"); 
+        password.focus(); 
+        return false; 
+    } 
+   
+    
+   
+    return true; 
+}
+</script>
+<style>
+body {
+    background-color: yellow;
+}
+h3{
+  font-family: Calibri; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:SlateBlue;
+  text-align: center; 
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri; 
+  color:white; 
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  text-align:; 
+  background-color: SlateBlue; 
+  border-collapse: collapse; 
+  border: 2px solid navy
+}
+table.inner{
+  border: 0px
+}
+</style>
+</head>
+
+<body>
+<form name="RegForm"  onsubmit="return validate()" action="reg-process.jsp" method="post">
+<h3>STUDENT REGISTRATION FORM</h3>
+
+<table align="center" cellpadding = "10">
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="fname" maxlength="30"/>
+</td>
+</tr>
+ 
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="lname" maxlength="30"/>
+</td>
+</tr>
+ 
+<tr>
+<td>EMAIL ID</td>
+<td><input type="text" name="email" maxlength="100" /></td>
+</tr>
+ 
+<tr>
+<td>USER ID</td>
+<td>
+<input type="text" name="userid" maxlength="10" />
+</td>
+</tr>
+  
+ <tr>
+<td>PASSWORD</td>
+<td>
+<input type="password" name="password" maxlength="10" />
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+</form>
+ 
+</body>
+</html>
